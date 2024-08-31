@@ -1,4 +1,6 @@
-import "./globals.css";
+import Header from "@/components/Header";
+import Playfair from "@/lib/fontLoader";
+import "@/styles/globals.css";
 
 
 export default function RootLayout({
@@ -9,8 +11,11 @@ export default function RootLayout({
   params: { lang: string }
 }>) {
   return (
-    <html lang={lang}>
-      <body>{children}</body>
+    <html lang={lang} className={Playfair.variable}>
+      <body>
+        <Header />
+        {children}
+      </body>
     </html>
   );
 }
