@@ -37,6 +37,7 @@ const config = {
         ring: "hsl(var(--ring))",
         neutral: {
           DEFAULT: "hsl(var(--neutral))",
+          '800': "hsla(var(--neutral), 0.8)",
           '200': "hsla(var(--neutral), 0.2)",
         },
         background: "hsl(var(--background))",
