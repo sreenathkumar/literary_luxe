@@ -5,15 +5,14 @@ import Menu from './ui/Menu'
 
 function Header() {
     return (
-        <div className='p-4 sticky'>
+        <header className='p-4 sticky'>
             <div className="md:container flex items-center justify-between">
                 <Logo text='LiteraryLuxe' />
                 <div className="flex gap-10">
                     <Menu />
                 </div>
             </div>
-
-        </div>
+        </header>
     )
 }
 
