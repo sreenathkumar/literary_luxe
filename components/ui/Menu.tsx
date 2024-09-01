@@ -84,7 +84,7 @@ function MobileMenu() {
         transition={{ duration: 0.3, ease: 'easeInOut' }}
         className="fixed top-0 right-0 w-64 px-6 py-4 h-full flex flex-col bg-accent-100 shadow-lg z-50"
       >
-        <X onClick={toggleMenu} className="ml-auto mb-10 cursor-pointer text-neutral-200" aria-label="close" />
+        <X onClick={toggleMenu} className="ml-auto mb-10 cursor-pointer text-neutral-800" aria-label="close" />
 
         {/* menu items */}
         <NavigationMenu className="w-full items-start">
@@ -112,7 +112,7 @@ function MobileMenu() {
               <Link href='/login' >Login</Link>
             </Button>
           </div>
-          <SocialIcons />
+          <SocialIcons className="flex mt-auto gap-4 justify-center text-neutral" />
         </div>
 
       </motion.div>
