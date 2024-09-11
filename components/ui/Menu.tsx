@@ -2,13 +2,13 @@
 
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
-import { NavigationMenu, NavigationMenuItem, NavigationMenuLink, NavigationMenuList } from './shadcn/navigation-menu';
+import { NavigationMenu, NavigationMenuItem, NavigationMenuLink, NavigationMenuList } from '@shadcn/navigation-menu';
 
 // MenuItem component, assuming it exists and properly renders a menu item
 import Link from "next/link";
 import { AlignRight, X } from "lucide-react";
 import SocialIcons from "./SocialIcons";
-import { Button } from "./shadcn/button";
+import { Button } from "../shadcn/button";
 
 
 function Menu() {

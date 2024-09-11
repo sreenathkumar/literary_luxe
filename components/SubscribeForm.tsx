@@ -1,8 +1,8 @@
 'use client'
 
 import { FormEvent, useState } from "react"
-import { Button } from "./ui/shadcn/button"
-import { Input } from "./ui/shadcn/input"
+import { Button } from "@shadcn/button"
+import { Input } from "@shadcn/input"
 import { subscribeToNewsLetter } from "@/actions/newsletter";
 import { cn } from "@/lib/utils";
 
