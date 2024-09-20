@@ -76,13 +76,14 @@ function MobileMenu() {
 
   return (
     <div>
-      <AlignRight onClick={toggleMenu} className="cursor-pointer text-neutral z-40" />
+      <AlignRight onClick={toggleMenu} className="cursor-pointer text-neutral z-40" aria-controls="mobile-menu" aria-label="open" aria-expanded={isOpen} role="button" tabIndex={0} />
       <motion.div
         id="mobile-menu"
         initial={{ x: '100%' }}
         animate={{ x: isOpen ? '0%' : '100%' }}
         transition={{ duration: 0.3, ease: 'easeInOut' }}
         className="fixed top-0 right-0 w-64 px-6 py-4 h-full flex flex-col bg-accent-100 shadow-lg z-50"
+        aria-hidden={!isOpen}
       >
         <X onClick={toggleMenu} className="ml-auto mb-10 cursor-pointer text-neutral-800" aria-label="close" />
 
