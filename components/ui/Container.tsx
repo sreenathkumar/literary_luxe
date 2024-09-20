@@ -1,9 +1,9 @@
 import { cn } from "@/lib/utils"
 
 
-function Container({ children }: { children: React.ReactNode }) {
+function Container({ children, classname }: { children: React.ReactNode, classname?: string }) {
     return (
-        <div className={cn("w-full flex flex-col px-4 md:container")}>
+        <div className={cn(`flex flex-col px-4 md:container ${classname ? classname : ''}`)}>
             {children}
         </div>
     )
