@@ -1,101 +1,144 @@
 import type { Config } from "tailwindcss"
 
 const config = {
-  darkMode: ["class"],
-  content: [
-    './pages/**/*.{ts,tsx}',
-    './components/**/*.{ts,tsx}',
-    './app/**/*.{ts,tsx}',
-    './src/**/*.{ts,tsx}',
-  ],
-  prefix: "",
-  theme: {
-    container: {
-      center: true,
-      padding: "2rem",
-      screens: {
-        "2xl": "1400px",
-      },
-    },
-    extend: {
-      fontFamily: {
-        primary: "var(--font-primary)",
-      },
-      fontSize: {
-        h1: "72px",
-        h2: "56px",
-        h3: "32px",
-        h4: "24px",
-        "body-lg": "20px",
-        body: "16px",
-        "body-sm": "14px",
+	darkMode: ["class"],
+	content: [
+		'./pages/**/*.{ts,tsx}',
+		'./components/**/*.{ts,tsx}',
+		'./app/**/*.{ts,tsx}',
+		'./src/**/*.{ts,tsx}',
+	],
+	prefix: "",
+	theme: {
+		container: {
+			center: true,
+			padding: '2rem',
+			screens: {
+				'2xl': '1400px'
+			}
+		},
+		extend: {
+			fontFamily: {
+				primary: 'var(--font-primary)'
+			},
+			fontSize: {
+				sm: ['0.75rem', {
+					lineHeight: '1.6',
+					letterSpacing: '',
+					fontWeight: ''
+				}],
+				base: ['1rem', {
+					lineHeight: '1.6',
 
-      },
-      colors: {
-        border: "hsl(var(--border))",
-        input: "hsl(var(--input))",
-        ring: "hsl(var(--ring))",
-        neutral: {
-          DEFAULT: "hsl(var(--neutral))",
-          '800': "hsla(var(--neutral), 0.8)",
-          '200': "hsla(var(--neutral), 0.2)",
-        },
-        background: "hsl(var(--background))",
-        foreground: "hsl(var(--foreground))",
-        primary: {
-          DEFAULT: "hsl(var(--primary))",
-          foreground: "hsl(var(--primary-foreground))",
-        },
-        secondary: {
-          DEFAULT: "hsl(var(--secondary))",
-          foreground: "hsl(var(--secondary-foreground))",
-        },
-        destructive: {
-          DEFAULT: "hsl(var(--destructive))",
-          foreground: "hsl(var(--destructive-foreground))",
-        },
-        muted: {
-          DEFAULT: "hsl(var(--muted))",
-          foreground: "hsl(var(--muted-foreground))",
-        },
-        accent: {
-          DEFAULT: "hsl(var(--accent))",
-          foreground: "hsl(var(--accent-foreground))",
-          "100": "hsl(var(--accent-100))",
-          "200": "hsl(var(--accent-200))",
+				}],
+				lg: ['1.25rem', {
+					lineHeight: '1.6',
 
-        },
-        popover: {
-          DEFAULT: "hsl(var(--popover))",
-          foreground: "hsl(var(--popover-foreground))",
-        },
-        card: {
-          DEFAULT: "hsl(var(--card))",
-          foreground: "hsl(var(--card-foreground))",
-        },
-      },
-      borderRadius: {
-        lg: "var(--radius)",
-        md: "calc(var(--radius) - 2px)",
-        sm: "calc(var(--radius) - 4px)",
-      },
-      keyframes: {
-        "accordion-down": {
-          from: { height: "0" },
-          to: { height: "var(--radix-accordion-content-height)" },
-        },
-        "accordion-up": {
-          from: { height: "var(--radix-accordion-content-height)" },
-          to: { height: "0" },
-        },
-      },
-      animation: {
-        "accordion-down": "accordion-down 0.2s ease-out",
-        "accordion-up": "accordion-up 0.2s ease-out",
-      },
-    },
-  },
-  plugins: [require("tailwindcss-animate")],
+				}],
+				xl: ['1.5rem', {
+					lineHeight: '1.3',
+				}],
+				'2xl': ['2rem', {
+					lineHeight: '1.3',
+					letterSpacing: '-0.01em',
+					fontWeight: '800'
+				}],
+				'3xl': ['2.5rem', {
+					lineHeight: '1.3',
+					letterSpacing: '-0.01',
+					fontWeight: '800'
+				}],
+				'4xl': ['3rem', {
+					lineHeight: '1.3',
+					letterSpacing: '-0.02em',
+					fontWeight: '800'
+				}],
+				'5xl': ['3.5rem', {
+					lineHeight: '1.3',
+					letterSpacing: '-0.02em',
+					fontWeight: '800'
+				}],
+				heavy: ['4.5rem', {
+					lineHeight: '1.3',
+					letterSpacing: '-0.02em',
+					fontWeight: '800'
+				}]
+
+			},
+			colors: {
+				border: 'hsl(var(--border))',
+				input: 'hsl(var(--input))',
+				ring: 'hsl(var(--ring))',
+				neutral: {
+					'200': 'hsla(var(--neutral), 0.2)',
+					'700': 'hsla(var(--neutral), 0.7)',
+					'800': 'hsla(var(--neutral), 0.8)',
+					DEFAULT: 'hsl(var(--neutral))'
+				},
+				background: 'hsl(var(--background))',
+				foreground: 'hsl(var(--foreground))',
+				primary: {
+					DEFAULT: 'hsl(var(--primary))',
+					foreground: 'hsl(var(--primary-foreground))'
+				},
+				secondary: {
+					DEFAULT: 'hsl(var(--secondary))',
+					foreground: 'hsl(var(--secondary-foreground))'
+				},
+				destructive: {
+					DEFAULT: 'hsl(var(--destructive))',
+					foreground: 'hsl(var(--destructive-foreground))'
+				},
+				muted: {
+					DEFAULT: 'hsl(var(--muted))',
+					foreground: 'hsl(var(--muted-foreground))'
+				},
+				accent: {
+					DEFAULT: 'hsl(var(--accent))',
+					foreground: 'hsl(var(--accent-foreground))',
+					'100': 'hsl(var(--accent-100))',
+					'200': 'hsl(var(--accent-200))'
+				},
+				popover: {
+					DEFAULT: 'hsl(var(--popover))',
+					foreground: 'hsl(var(--popover-foreground))'
+				},
+				card: {
+					DEFAULT: 'hsl(var(--card))',
+					foreground: 'hsl(var(--card-foreground))'
+				}
+			},
+			borderRadius: {
+				lg: 'var(--radius)',
+				md: 'calc(var(--radius) - 2px)',
+				sm: 'calc(var(--radius) - 4px)'
+			},
+			keyframes: {
+				'accordion-down': {
+					from: {
+						height: '0'
+					},
+					to: {
+						height: 'var(--radix-accordion-content-height)'
+					}
+				},
+				'accordion-up': {
+					from: {
+						height: 'var(--radix-accordion-content-height)'
+					},
+					to: {
+						height: '0'
+					}
+				},
+
+			},
+			animation: {
+				'accordion-down': 'accordion-down 0.2s ease-out',
+				'accordion-up': 'accordion-up 0.2s ease-out',
+			}
+		}
+	},
+	plugins: [require("tailwindcss-animate")],
 } satisfies Config
 
 export default config
