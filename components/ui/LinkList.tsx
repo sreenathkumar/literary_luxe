@@ -1,6 +1,6 @@
 import { cn } from "@/lib/utils"
 import LinkListItem from "./LinkListItem"
-import H4 from "./H4"
+import H4 from "../globalTags/H4"
 
 interface LinkListProps {
     title?: string

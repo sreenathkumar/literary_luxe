@@ -1,5 +1,5 @@
 import { cn } from "@/lib/utils"
-import H4 from "./H4"
+import H4 from "../globalTags/H4"
 import SubscribeForm from "../SubscribeForm"
 
 
