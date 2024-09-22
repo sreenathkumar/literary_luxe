@@ -24,8 +24,6 @@ const config = {
 			fontSize: {
 				sm: ['0.75rem', {
 					lineHeight: '1.6',
-					letterSpacing: '',
-					fontWeight: ''
 				}],
 				base: ['1rem', {
 					lineHeight: '1.6',
@@ -70,9 +68,6 @@ const config = {
 				input: 'hsl(var(--input))',
 				ring: 'hsl(var(--ring))',
 				neutral: {
-					'200': 'hsla(var(--neutral), 0.2)',
-					'700': 'hsla(var(--neutral), 0.7)',
-					'800': 'hsla(var(--neutral), 0.8)',
 					DEFAULT: 'hsl(var(--neutral))'
 				},
 				background: 'hsl(var(--background))',
@@ -104,8 +99,8 @@ const config = {
 					foreground: 'hsl(var(--popover-foreground))'
 				},
 				card: {
-					DEFAULT: 'hsl(var(--card))',
-					foreground: 'hsl(var(--card-foreground))'
+					DEFAULT: 'var(--card)',
+					foreground: 'var(--card-foreground)'
 				}
 			},
 			borderRadius: {
