@@ -7,7 +7,7 @@
     --neutral: 0, 0%, 100%;
     --background: 0, 36%, 9%;
     --foreground: 222.2 84% 4.9%;
-    --card: 0 0% 100%;
+    --card: #462719;
     --card-foreground: 222.2 84% 4.9%;
     --popover: 0 0% 100%;
     --popover-foreground: 222.2 84% 4.9%;
@@ -25,7 +25,7 @@
     --destructive-foreground: 210 40% 98%;
     --border: 214.3 31.8% 91.4%;
     --input: 0 0% 100%;
-    --ring: 0, 36%, 9%;
+    --ring: #462719;
     --radius: 0.5rem;
     --chart-1: 12 76% 61%;
     --chart-2: 173 58% 39%;
@@ -64,7 +64,7 @@
 
 @layer base {
   * {
-    @apply border-border;
+    @apply border-border transition;
     font-family: var(--font-primary)
   }
   body {
