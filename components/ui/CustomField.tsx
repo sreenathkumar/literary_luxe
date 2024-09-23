@@ -13,9 +13,9 @@ const FormField = ({ label, htmlFor, children, error }: FormFieldProps) => {
     const id = htmlFor || getChildId(children);
 
     return (
-        <div className="mb-5">
+        <div className="self-stretch mb-6">
             {label && (
-                <label htmlFor={id} className="text-neutral-0 mb-2 block">
+                <label htmlFor={id} className="mb-2 block text-neutral-200 text-sm leading-3 tracking-wider">
                     {label}
                 </label>
             )}
