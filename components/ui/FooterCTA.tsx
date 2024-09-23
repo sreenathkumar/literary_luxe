@@ -8,7 +8,7 @@ function FooterCTA() {
         <div className={cn("flex-col justify-start items-start gap-8 inline-flex md:max-w-[364px]")}>
             <div className="self-stretch flex-col justify-start items-start gap-4 flex">
                 <H4>Subscribe</H4>
-                <p className="text-body text-neutral-800">Join our community to receive updates and exclusive offers.</p>
+                <p className="text-body text-neutral-200">Join our community to receive updates and exclusive offers.</p>
             </div>
             <div className="self-stretch flex-col justify-start items-start gap-4 flex">
                 <SubscribeForm />

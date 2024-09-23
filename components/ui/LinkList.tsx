@@ -16,7 +16,7 @@ function LinkList({ title, links }: LinkListProps) {
             <H4>{title}</H4>
             <ul className={cn("self-stretch flex-col justify-start items-start flex")}>
                 {
-                    links.map(({ title, url }) => <LinkListItem key={title} text={title} href={url} className={cn('self-stretch py-2 justify-start items-start inline-flex text-neutral-800')} />)
+                    links.map(({ title, url }) => <LinkListItem key={title} text={title} href={url} className={cn('self-stretch py-2 justify-start items-start inline-flex text-neutral-200')} />)
                 }
             </ul>
         </div>
