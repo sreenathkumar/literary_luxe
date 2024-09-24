@@ -23,7 +23,7 @@ const FormField = ({ label, htmlFor, children, error }: FormFieldProps) => {
             {
                 // Display error message if there is an error
                 error?.map((err) => (
-                    <p className="text-primary text-sm mt-1" key={err}>
+                    <p className="text-primary text-sm text-red-500 mt-1" key={err}>
                         {err}
                     </p>
                 ))

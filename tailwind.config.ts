@@ -92,7 +92,9 @@ const config = {
 					DEFAULT: 'hsl(var(--accent))',
 					foreground: 'hsl(var(--accent-foreground))',
 					'100': 'hsl(var(--accent-100))',
-					'200': 'hsl(var(--accent-200))'
+					'200': 'hsl(var(--accent-200))',
+					'800': 'hsl(var(--accent-800))',
+					'900': 'hsl(var(--accent-900))'
 				},
 				popover: {
 					DEFAULT: 'hsl(var(--popover))',

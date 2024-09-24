@@ -1,7 +1,7 @@
 import FeaturedSection from "@/components/sections/FeaturedSection";
 import HeroSection from "@/components/sections/HeroSection";
 
-export default function Home() {
+async function Home() {
   return (
     <>
       <HeroSection />
@@ -9,3 +9,5 @@ export default function Home() {
     </>
   );
 }
+
+export default Home;

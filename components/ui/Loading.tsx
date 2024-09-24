@@ -28,5 +28,6 @@ const LoadingSpinner = ({ className }: { className?: string }) => {
 }
 
 export {
-    LoadingSpinner
+    LoadingSpinner,
+    SpinnerIcon
 }
