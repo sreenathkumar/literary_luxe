@@ -7,9 +7,6 @@ function GoogleAuth() {
     const params = useParams();
     const returnTo = params?.returnTo;
 
-    console.log('returnTo:', returnTo, 'params:', params);
-
-
     // Handle the case when it's an array, a string, or undefined
     const returnToString = Array.isArray(returnTo)
         ? returnTo.join('/')  // Convert array to string if it's an array

@@ -18,7 +18,6 @@ const initailState = {
 
 function SignupForm() {
     const [state, registerAcion] = useFormState(register, initailState);
-    console.log('state in signup: ', state);
 
     return (
         <form className="self-stretch flex flex-col" action={registerAcion}>
