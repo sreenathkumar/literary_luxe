@@ -1,17 +1,18 @@
 import NextAuth from "next-auth"
 import Credentials from "next-auth/providers/credentials"
-import { saltAndHashPassword } from "./lib/password"
-import { z, ZodError } from "zod"
+import GoogleProvider from 'next-auth/providers/google'
+import { saltAndHashPassword } from "@lib/password"
+import { ZodError } from "zod"
 import { verifyUser } from "./actions/DB/verifyPassword"
+import { MongoDBAdapter } from "@auth/mongodb-adapter"
+import client from "@lib/db"
+import { signInSchema } from "@lib/zod"
 
-// signInSchema
-const signInSchema = z.object({
-    email: z.string({ message: "Email is required" }),
-    password: z.string({ message: "Password is required" }),
-})
 
 export const { handlers: { GET, POST }, signIn, signOut, auth } = NextAuth({
+    adapter: MongoDBAdapter(client),
     providers: [
+        GoogleProvider,
         Credentials({
             // You can specify which fields should be submitted, by adding keys to the `credentials` object.
             // e.g. domain, username, password, 2FA token, etc.
@@ -46,4 +47,9 @@ export const { handlers: { GET, POST }, signIn, signOut, auth } = NextAuth({
             },
         }),
     ],
+
+    pages: {
+        signOut: '/signup',
+        signIn: '/signin',
+    }
 })

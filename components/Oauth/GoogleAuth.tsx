@@ -1,8 +1,31 @@
+'use client'
+import { useParams } from 'next/navigation'
 import { Button } from '../shadcn/button'
+import { signIn } from 'next-auth/react'
 
 function GoogleAuth() {
+    const params = useParams();
+    const returnTo = params?.returnTo;
+
+    console.log('returnTo:', returnTo, 'params:', params);
+
+
+    // Handle the case when it's an array, a string, or undefined
+    const returnToString = Array.isArray(returnTo)
+        ? returnTo.join('/')  // Convert array to string if it's an array
+        : returnTo || '';     // Use empty string if undefined
+
+
+    const handleLogin = async () => {
+        if (returnTo) {
+            await signIn('google', { redirectTo: returnToString })
+        }
+        else {
+            await signIn('google', { callbackUrl: '/dashboard' })
+        }
+    }
     return (
-        <Button className="gap-2 bg-accent-900 border-accent-900">
+        <Button className="gap-2 bg-accent-900 border-accent-900" onClick={handleLogin}>
             <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M20.0354 10.7281C20.0363 10.0466 19.9782 9.3664 19.862 8.69482H10.3662V12.546H15.805C15.6937 13.1611 15.4581 13.7475 15.1125 14.2697C14.7669 14.792 14.3183 15.2393 13.7939 15.5848V18.0846H17.0398C18.9404 16.3444 20.0354 13.771 20.0354 10.7281Z" fill="#4285F4" />
                 <path d="M10.3662 20.5C13.0834 20.5 15.3714 19.6139 17.0398 18.0862L13.7939 15.5864C12.8905 16.1947 11.7269 16.5419 10.3662 16.5419C7.73979 16.5419 5.51058 14.7836 4.71344 12.4143H1.36963V14.9906C2.2077 16.6467 3.4928 18.0389 5.08144 19.0118C6.67008 19.9847 8.49975 20.4999 10.3662 20.5Z" fill="#34A853" />
