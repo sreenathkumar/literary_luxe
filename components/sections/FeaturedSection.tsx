@@ -10,7 +10,7 @@ import { LoadingSpinner } from "../ui/Loading"
 async function FeaturedSection() {
   return (
     <Section>
-      <Container classname="gap-[72px]">
+      <Container className="gap-[72px]">
         <SectionTitle text='Best seller of the week' />
         <Suspense fallback={<LoadingSpinner />}>
           <BestSellingBooks />
