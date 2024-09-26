@@ -1,6 +1,7 @@
 import NextAuth from "next-auth"
 import Credentials from "next-auth/providers/credentials"
 import GoogleProvider from 'next-auth/providers/google'
+import FacebookProvider from 'next-auth/providers/facebook'
 import { saltAndHashPassword } from "@lib/password"
 import { ZodError } from "zod"
 import { verifyUser } from "./actions/DB/verifyPassword"
@@ -13,6 +14,7 @@ export const { handlers: { GET, POST }, signIn, signOut, auth } = NextAuth({
     adapter: MongoDBAdapter(client),
     providers: [
         GoogleProvider,
+        FacebookProvider,
         Credentials({
             // You can specify which fields should be submitted, by adding keys to the `credentials` object.
             // e.g. domain, username, password, 2FA token, etc.

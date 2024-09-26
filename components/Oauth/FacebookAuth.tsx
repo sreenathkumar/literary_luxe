@@ -17,10 +17,10 @@ function FacebookAuth() {
 
   const handleLogin = async () => {
     if (returnTo) {
-      await signIn('google', { redirectTo: returnToString })
+      await signIn('facebook', { redirectTo: returnToString })
     }
     else {
-      await signIn('google', { callbackUrl: '/dashboard' })
+      await signIn('facebook', { redirectTo: '/dashboard' })
     }
   }
   return (

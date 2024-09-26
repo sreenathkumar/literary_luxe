@@ -18,7 +18,7 @@ function GoogleAuth() {
             await signIn('google', { redirectTo: returnToString })
         }
         else {
-            await signIn('google', { callbackUrl: '/dashboard' })
+            await signIn('google', { redirectTo: '/dashboard' })
         }
     }
     return (
