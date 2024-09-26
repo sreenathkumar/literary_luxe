@@ -57,7 +57,7 @@ function Menu() {
                 <Link href='/signup'>Signup</Link>
               </Button>
               <Button variant={'default'}>
-                <Link href='/login'>Login</Link>
+                <Link href='/signin'>Signin</Link>
               </Button>
             </NavigationMenuItem>
           </NavigationMenuList>
