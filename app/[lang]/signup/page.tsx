@@ -8,7 +8,7 @@ function SignupPage() {
     return (
         <main className={cn('px-4 py-[96px]')}>
             <Container className="self-stretch flex-col justify-start items-start flex bg-card rounded-2xl px-4 py-8 gap-12">
-                <h5 className="self-stretch text-neutral text-xl text-center font-semibold leading-6">Nice to see you</h5>
+                <h5 className="self-stretch text-neutral text-xl text-center font-semibold leading-6">Join Us on a Literary Journey</h5>
                 <div className="self-stretch flex-col justify-start items-start gap-12 flex">
                     <SignupForm />
                     <div className="gap-6 flex flex-col">
