@@ -3,7 +3,7 @@ import H4 from "../globalTags/H4"
 import { Button } from "../shadcn/button"
 import Image from "next/image"
 import Link from "next/link"
-import { cn } from "@/lib/utils"
+import { cn, shortenText } from "@/lib/utils"
 
 export interface BookCardProps {
     id?: string,
@@ -20,8 +20,8 @@ function BookCard({ title, img, url, author }: BookCardProps) {
                 <Image className="w-28 h-44 rounded shadow" width={118} height={177} alt={title || 'book_thubmnail'} src={img || 'https://via.placeholder.com/118x177'} />
             </div>
             <div className="self-stretch flex-col justify-start items-start gap-2 flex">
-                <h5 className={cn('text-base text-neutral font-semibold tracking-widest')}>{title || "The book tittle"}</h5>
-                <p className="text-sm font-normal font-primary text-neutral-200 tracking-widest">By: {author || "The book author name"}</p>
+                <h5 className={cn('text-base text-neutral font-medium tracking-normal')}>{shortenText(title, 32) || "The book tittle"}</h5>
+                <p className="text-sm font-normal font-primary text-neutral-200 tracking-widest">By: {shortenText(author, 17) || "The book author name"}</p>
                 {/* <div className="justify-start items-center gap-1.5 inline-flex">
                         <div className="justify-start items-center gap-1 flex">
                             <div className="w-4 h-4 rounded-full bor relative">
