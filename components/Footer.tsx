@@ -7,7 +7,7 @@ import Container from "./ui/Container"
 
 function Footer() {
     return (
-        <footer className={cn("pt-[96px] mt-auto w-full bg-[#131211]")}>
+        <footer className={cn("pt-[96px] mt-auto w-full bg-[#131211] px-4")}>
             <Container>
                 <div className={cn("flex flex-col justify-start items-start gap-10 md:flex-row md:justify-between ")}>
                     <Branding />
