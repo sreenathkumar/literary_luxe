@@ -12,7 +12,7 @@ function SignupPage() {
                 <div className="self-stretch flex-col justify-start items-start gap-12 flex">
                     <SignupForm />
                     <div className="gap-6 flex flex-col">
-                        <span className="self-stretch text-center text-neutral-300 text-base font-semibold">Or Sign up with</span>
+                        <span className="self-stretch text-center text-neutral-300 text-base font-semibold">Or Sign in with</span>
                         <SocialAuth />
                     </div>
 
