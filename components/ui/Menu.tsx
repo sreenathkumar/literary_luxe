@@ -110,7 +110,7 @@ function MobileMenu() {
               <Link href='/signup'>Signup</Link>
             </Button>
             <Button className="w-1/2">
-              <Link href='/login' >Login</Link>
+              <Link href='/signin'>Signin</Link>
             </Button>
           </div>
           <SocialIcons className="flex mt-auto gap-4 justify-center text-neutral" />
