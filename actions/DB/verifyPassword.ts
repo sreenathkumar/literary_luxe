@@ -7,8 +7,11 @@ import bcrypt from "bcrypt";
 async function verifyUser({ email, password }: { email: string, password: string }) {
     await dbConnect();
     try {
-        const user = await User.findOne({ email })
+        const user = await User.findOne({ email });
 
+        if (!user) {
+            return null;
+        }
         //compare the password
         const res = await bcrypt.compare(password, user?.password || "");
 
@@ -17,11 +20,10 @@ async function verifyUser({ email, password }: { email: string, password: string
         } else {
             return null;
         }
-    } catch (error) {
+    } catch (error: any) {
         return null;
     }
 };
-
 
 export {
     verifyUser
